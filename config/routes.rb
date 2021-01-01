@@ -14,6 +14,5 @@ Rails.application.routes.draw do
   get "/signin" => "sessions#new"
 
   resources :users
-  get "/signup" => "users#new"
 
 end
