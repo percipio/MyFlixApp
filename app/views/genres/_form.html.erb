@@ -1,0 +1,13 @@
+<%= form_with(model: genre, local: true) do |f| %>
+    <%= render "shared/errors", object: genre %>
+
+    <%= f.label :name %>
+    <%= f.text_field :name, autofocus: true, required: true %>
+
+    <% if genre.new_record? %>
+        <%= f.submit "Add Genre" %>
+    <% else %>
+        <%= f.submit "Update Genre" %>    
+    <% end %>
+        
+<% end %>

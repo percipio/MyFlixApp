@@ -1,0 +1,15 @@
+<h1>Genres</h1>
+<ul class="genres">
+  <% @genres.each do |genre| %>
+    <li>
+      <%= genre.name %>
+      <span class="actions">
+        <%= link_to "Edit", edit_genre_path(genre), class: "button edit" %>
+        <%= link_to "Delete", genre_path(genre), method: :delete, class: "button delete", data: { confirm: "Are you sure?"} %>
+      </span>
+    </li>
+  <% end %>
+</ul>
+<section class="admin">
+    <%= link_to "Add New Genre", new_genre_path, class: "button" %>
+</section>
