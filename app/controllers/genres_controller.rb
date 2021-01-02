@@ -4,7 +4,7 @@ class GenresController < ApplicationController
   before_action :set_genre, except: [:index, :new, :create]
 
   def index
-    @genres = Genre.all.order(:name, :desc)
+    @genres = Genre.all.order(name: :desc)
   end
 
   def new
