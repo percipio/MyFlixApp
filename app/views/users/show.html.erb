@@ -16,7 +16,7 @@
             <div class="review">
                 <div class="details">
                     <span class="title">
-                        <%= link_to image_tag(r.movie.image_file_name), r.movie %>
+                        <%= link_to main_image(r.movie), r.movie %>
                     </span>
                     <%= render "shared/stars", percent: r.stars_as_percent %>
                     <span class="date">
@@ -33,7 +33,7 @@
         <h3>Favorite Movies</h3>
         <div class="favorite-movies">
             <% @favorite_movies.each do |movie| %>
-            <%= link_to image_tag(movie.image_file_name), movie %>
+            <%= link_to main_image(movie), movie %>
             <% end %>
         </div>
     <% end %>

@@ -12,6 +12,20 @@ class UsersController < ApplicationController
         @favorite_movies = @user.favorite_movies
     end
 
+    def new
+        @user = User.new
+    end
+
+    def create
+        @user = User.create(user_params)
+        if @user.save
+            session[:user_id] = @user.id
+            redirect_to @user, notice: "Thanks for signing up"
+        else
+            render :new
+        end
+    end
+
     def edit
     end
 
