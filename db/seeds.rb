@@ -181,3 +181,14 @@ Movie.create!([
   file = File.open(Rails.root.join("app/assets/images/#{file_name}"))
   movie.main_image.attach(io: file, filename: file_name)
 end
+
+Genre.create(name: "Action")
+Genre.create(name: "Comedy")
+Genre.create(name: "Drama")
+Genre.create(name: "Romance")
+Genre.create(name: "Thriller")
+Genre.create(name: "Fantasy")
+Genre.create(name: "Documentary")
+Genre.create(name: "Adventure")
+Genre.create(name: "Animation")
+Genre.create(name: "Sci-Fi")
