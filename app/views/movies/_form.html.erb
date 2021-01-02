@@ -27,7 +27,7 @@
     <%= f.number_field :total_gross %>
 
     <div class="checkboxes">
-        <%= f.collection_check_boxes(:genre_ids, Genre.all.order(:name, :desc), :id, :name) %>
+        <%= f.collection_check_boxes(:genre_ids, Genre.all, :id, :name) %>
         <%= link_to "Add a genre", new_genre_path, class: "button" %><br/>
         <%= link_to "Edit Genres", genres_path %>
     </div>
